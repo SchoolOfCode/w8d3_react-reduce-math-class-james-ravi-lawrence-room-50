@@ -10,11 +10,14 @@ to check the console.logs for each task's result. (You
  */
 
 /* 👉 1. Replicate the add function from the demonstration so 
-that the variable sum is equal to the sum of the array. Use 
+that the variclearable sum is equal to the sum of the array. Use 
 an initial value of zero after your reduce callback function. */
 
 export function add(numbers) {
   //Your code here
+  return numbers.reduce((acc,cur)=>{
+    return acc + cur;
+  },0)
 }
 
 /* 👉 2. In addIfTwoDigits, use reduce to add up *only* the numbers 
@@ -22,6 +25,13 @@ that have exactly two digits. Return the sum.*/
 
 export function addIfTwoDigits(numbers) {
   //Your code here
+  return numbers.reduce((acc,cur)=>{
+    if(cur > 9 && cur < 100 ){
+      return acc + cur;
+    }else{
+      return acc;
+    }
+  },0)
 }
 
 /* 👉 3. In addWithDoubleOdds, use reduce to double the odd numbers 
@@ -30,6 +40,12 @@ the sum of the whole array with the odd numbers doubled.*/
 
 export function addWithDoubleOdds(numbers) {
   //Your code here
+  return numbers.reduce((acc,cur) => {
+    if(cur%2 != 0){
+      return acc + cur * 2;
+    }
+    return acc + cur;
+  },0)
 }
 
 /* 🌟 BONUS: 4. Reduce isn't just for numbers. In createObjectFromKeyValuePairs, 
