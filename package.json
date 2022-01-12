@@ -7,7 +7,7 @@
   },
   "scripts": {
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --verbose",
-    "test1": "npm t -- add\\\\.test",
+    "test1": "npm t -- add.test",
     "test2": "npm t -- add-if-two",
     "test3": "npm t -- add-with",
     "test4": "npm t -- create-object",

@@ -15,6 +15,9 @@ an initial value of zero after your reduce callback function. */
 
 export function add(numbers) {
   //Your code here
+  return numbers.reduce((acc, cur)=>{
+    return acc + cur;
+  }, 0)
 }
 
 /* 👉 2. In addIfTwoDigits, use reduce to add up *only* the numbers 
@@ -46,7 +49,11 @@ For example:
 
 export function createObjectFromKeyValuePairs(keyValuePairs) {
   //Your code here
-}
+  function reducer(acc, cur) {
+    return {...acc, [cur[0]]:cur[1]}
+   }
+   return keyValuePairs.reduce(reducer, {})
+ }
 
 /* 🌟 BONUS: 5. In createTallyFromLetters, take in an array of letters and use reduce to 
 reduce them into a single object containing the letters and their respective counts.
